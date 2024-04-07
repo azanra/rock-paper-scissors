@@ -39,6 +39,15 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+function playGame(){
+    for(let i = 0; i < 5; i++){
+        const oldPlayerSelection = prompt("Enter between rock, paper, sciccor!: ");
+        const playerSelection = oldPlayerSelection.toLowerCase();
+        const computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection, computerSelection));
+    }   
+}
+
+playGame();
+
+
