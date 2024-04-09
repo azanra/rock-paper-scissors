@@ -38,6 +38,7 @@ function playRound(playerSelection, computerSelection){
                 playerLose();
                 return("you lose!, paper beats rock!");
             }
+            break;
         case "sciccor":
             if(computerSelection === "sciccor"){
                 return("it's a tie, you both draw sciccor");
@@ -50,6 +51,7 @@ function playRound(playerSelection, computerSelection){
                 playerLose();
                 return("you lose!, rock beats sciccor!");
             }
+            break;
     }
 }
 
@@ -67,9 +69,9 @@ function checkWinner(){
 
 function playGame(){
     for(let i = 0; i < 5; i++){
-        const oldPlayerSelection = prompt("Enter between rock, paper, sciccor!: ");
-        const playerSelection = oldPlayerSelection.toLowerCase();
-        const computerSelection = getComputerChoice();
+        var oldPlayerSelection = prompt("Enter between rock, paper, sciccor!: ");
+        var playerSelection = oldPlayerSelection.toLowerCase();
+        var computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
     }   
     checkWinner();
