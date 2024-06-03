@@ -57,7 +57,7 @@ function playRound(playerSelection, computerSelection){
 
 function checkWinner(){
     if(playerScore > computerScore){
-        console.log(`you win with a score of ${playerScore} agaisnt ${computerScore}`);
+        console.log(`you win with a score of ${playerScore} against ${computerScore}`);
     }
     else if(playerScore === computerScore){
         console.log(`it's a tie with both score of ${playerScore}`);
@@ -65,16 +65,23 @@ function checkWinner(){
     else{
         console.log(`you lose with score of ${playerScore} against ${computerScore}`);
     }
-}
+}   
 
 function playGame(){
-    for(let i = 0; i < 5; i++){
-        var oldPlayerSelection = prompt("Enter between rock, paper, sciccor!: ");
-        var playerSelection = oldPlayerSelection.toLowerCase();
-        var computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
-    }   
+    checkRock();
     checkWinner();
+}
+
+function checkRock() {
+    let rockBtn = document.querySelector('#rock');
+    rockBtn.addEventListener('click', isRock);
+
+    function isRock() {
+        let playerSelection = "rock";
+        let computerSelection = getComputerChoice();
+        console.log(playerSelection, computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
+    }
 }
 
 let playerScore = 0;
