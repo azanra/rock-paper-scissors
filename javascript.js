@@ -81,6 +81,7 @@ function checkRock() {
     function isRock() {
         let playerSelection = "rock";
         let computerSelection = getComputerChoice();
+        displayPlayerSelect(playerSelection);
         console.log(playerSelection, computerSelection);
         console.log(playRound(playerSelection, computerSelection));
         console.log(playerScore, computerScore);
@@ -94,6 +95,7 @@ function checkPaper() {
     function isPaper() {
         let playerSelection = 'paper';
         let computerSelection = getComputerChoice();
+        displayPlayerSelect(playerSelection);
         console.log(playerSelection, computerSelection);
         console.log(playRound(playerSelection, computerSelection));
         console.log(playerScore, computerScore);
@@ -107,11 +109,18 @@ function checkSciccor() {
     function isSciccor() {
         let playerSelection = 'sciccor';
         let computerSelection = getComputerChoice();
+        displayPlayerSelect(playerSelection);
         console.log(playerSelection, computerSelection);
         console.log(playRound(playerSelection, computerSelection));
         console.log(playerScore, computerScore);
     }
 }
+ function displayPlayerSelect(playerSelection) {
+    const container = document.querySelector('.display-playerSelect');
+    const div = document.querySelector('.playerSelect-text');
+    div.textContent = `player selection is ${playerSelection}`;
+    container.appendChild(div);
+ }
 
 let playerScore = 0;
 let computerScore = 0;
