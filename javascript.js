@@ -85,7 +85,9 @@ function checkRock() {
         displayComputerSelect(computerSelection);
         console.log(playerSelection, computerSelection);
         console.log(playRound(playerSelection, computerSelection));
+        displayRoundResult(playerSelection, computerSelection);
         console.log(playerScore, computerScore);
+        displayPlayerScore(playerScore);
     }
 }
 
@@ -100,7 +102,9 @@ function checkPaper() {
         displayComputerSelect(computerSelection);
         console.log(playerSelection, computerSelection);
         console.log(playRound(playerSelection, computerSelection));
+        displayRoundResult(playerSelection, computerSelection);
         console.log(playerScore, computerScore);
+        displayPlayerScore(playerScore);
     }
 }
 
@@ -115,22 +119,40 @@ function checkSciccor() {
         displayComputerSelect(computerSelection);
         console.log(playerSelection, computerSelection);
         console.log(playRound(playerSelection, computerSelection));
+        displayRoundResult(playerSelection,computerSelection);
         console.log(playerScore, computerScore);
+        displayPlayerScore(playerScore);
     }
 }
  function displayPlayerSelect(playerSelection) {
     const playerContainer = document.querySelector('.display-playerSelect');
     const playerText = document.querySelector('.playerSelect-text');
-    playerText.textContent = `Player selection is ${playerSelection}`;
+    playerText.textContent = `Player selection : ${playerSelection}`;
     playerContainer.appendChild(playerText);
  }
 
  function displayComputerSelect(computerSelection) {
     const computerContainer = document.querySelector('.display-computerSelect');
     const computerText = document.querySelector('.computerSelect-text');
-    computerText.textContent = `Computer selection is ${computerSelection}`;
+    computerText.textContent = `Computer selection : ${computerSelection}`;
     computerContainer.appendChild(computerText);
  }
+
+ function displayRoundResult(playerSelection, computerSelection) {
+    const resultContainer = document.querySelector('.display-roundResult');
+    const roundText = document.querySelector('.roundText');
+    roundText.textContent = `${playRound(playerSelection, computerSelection)}`;
+    resultContainer.appendChild(roundText);
+ }
+
+ function displayPlayerScore(playerScore) {
+    const playerScoreContainer = document.querySelector('.display-playerScore');
+    const playerScoreText = document.querySelector('.playerScore-text');
+    playerScoreText.textContent = `player score : ${playerScore}`;
+    playerScoreContainer.appendChild(playerScoreText);
+ }
+
+
 
 let playerScore = 0;
 let computerScore = 0;
