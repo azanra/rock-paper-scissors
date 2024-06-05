@@ -82,6 +82,7 @@ function checkRock() {
         let playerSelection = "rock";
         let computerSelection = getComputerChoice();
         displayPlayerSelect(playerSelection);
+        displayComputerSelect(computerSelection);
         console.log(playerSelection, computerSelection);
         console.log(playRound(playerSelection, computerSelection));
         console.log(playerScore, computerScore);
@@ -96,6 +97,7 @@ function checkPaper() {
         let playerSelection = 'paper';
         let computerSelection = getComputerChoice();
         displayPlayerSelect(playerSelection);
+        displayComputerSelect(computerSelection);
         console.log(playerSelection, computerSelection);
         console.log(playRound(playerSelection, computerSelection));
         console.log(playerScore, computerScore);
@@ -110,16 +112,24 @@ function checkSciccor() {
         let playerSelection = 'sciccor';
         let computerSelection = getComputerChoice();
         displayPlayerSelect(playerSelection);
+        displayComputerSelect(computerSelection);
         console.log(playerSelection, computerSelection);
         console.log(playRound(playerSelection, computerSelection));
         console.log(playerScore, computerScore);
     }
 }
  function displayPlayerSelect(playerSelection) {
-    const container = document.querySelector('.display-playerSelect');
-    const div = document.querySelector('.playerSelect-text');
-    div.textContent = `player selection is ${playerSelection}`;
-    container.appendChild(div);
+    const playerContainer = document.querySelector('.display-playerSelect');
+    const playerText = document.querySelector('.playerSelect-text');
+    playerText.textContent = `Player selection is ${playerSelection}`;
+    playerContainer.appendChild(playerText);
+ }
+
+ function displayComputerSelect(computerSelection) {
+    const computerContainer = document.querySelector('.display-computerSelect');
+    const computerText = document.querySelector('.computerSelect-text');
+    computerText.textContent = `Computer selection is ${computerSelection}`;
+    computerContainer.appendChild(computerText);
  }
 
 let playerScore = 0;
