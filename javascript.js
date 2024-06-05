@@ -69,6 +69,7 @@ function checkWinner(){
 
 function playGame(){
     checkRock();
+    checkPaper();
     checkWinner();
 }
 
@@ -81,6 +82,20 @@ function checkRock() {
         let computerSelection = getComputerChoice();
         console.log(playerSelection, computerSelection);
         console.log(playRound(playerSelection, computerSelection));
+        console.log(playerScore, computerScore);
+    }
+}
+
+function checkPaper() {
+    let paperBtn = document.querySelector('#paper');
+    paperBtn.addEventListener('click', isPaper);
+    
+    function isPaper() {
+        let playerSelection = 'paper';
+        let computerSelection = getComputerChoice();
+        console.log(playerSelection, computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
+        console.log(playerScore, computerScore);
     }
 }
 
