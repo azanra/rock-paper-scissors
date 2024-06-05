@@ -70,6 +70,7 @@ function checkWinner(){
 function playGame(){
     checkRock();
     checkPaper();
+    checkSciccor();
     checkWinner();
 }
 
@@ -92,6 +93,19 @@ function checkPaper() {
     
     function isPaper() {
         let playerSelection = 'paper';
+        let computerSelection = getComputerChoice();
+        console.log(playerSelection, computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
+        console.log(playerScore, computerScore);
+    }
+}
+
+function checkSciccor() {
+    let sciccorBtn = document.querySelector('#sciccor');
+    sciccorBtn.addEventListener('click', isSciccor);
+
+    function isSciccor() {
+        let playerSelection = 'sciccor';
         let computerSelection = getComputerChoice();
         console.log(playerSelection, computerSelection);
         console.log(playRound(playerSelection, computerSelection));
