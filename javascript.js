@@ -56,12 +56,19 @@ function playRound(playerSelection, computerSelection){
 }
 
 function checkWinner(){
-    console.log(playerScore, computerScore);
     if(playerScore === 5){
-        console.log('player is the winner');
+        const displayPlayerContainer = document.querySelector('.display-winner');
+        const displayPlayerText = document.querySelector('.winner-text');
+        displayPlayerText.textContent = 'Player is winning the round';
+        displayPlayerContainer.appendChild(displayPlayerText);
+        setScore();
     }
     else if(computerScore === 5){
-        console.log('computer is the winner');
+        const displayPlayerContainer = document.querySelector('.display-winner');
+        const displayPlayerText = document.querySelector('.winner-text');
+        displayPlayerText.textContent = 'Computer is winning the round';
+        displayPlayerContainer.appendChild(displayPlayerText);
+        setScore();
     }
 }   
 
@@ -154,8 +161,14 @@ function playGame(){
     checkSciccor();
 }
 
+function setScore() {
+    playerScore = 0;
+    computerScore = 0;
+}
+
 let playerScore = 0;
 let computerScore = 0;
+
 playGame();
 
 
