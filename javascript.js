@@ -83,11 +83,9 @@ function checkRock() {
         let computerSelection = getComputerChoice();
         displayPlayerSelect(playerSelection);
         displayComputerSelect(computerSelection);
-        console.log(playerSelection, computerSelection);
-        console.log(playRound(playerSelection, computerSelection));
         displayRoundResult(playerSelection, computerSelection);
-        console.log(playerScore, computerScore);
         displayPlayerScore(playerScore);
+        displayComputerScore(computerScore);
     }
 }
 
@@ -100,11 +98,9 @@ function checkPaper() {
         let computerSelection = getComputerChoice();
         displayPlayerSelect(playerSelection);
         displayComputerSelect(computerSelection);
-        console.log(playerSelection, computerSelection);
-        console.log(playRound(playerSelection, computerSelection));
         displayRoundResult(playerSelection, computerSelection);
-        console.log(playerScore, computerScore);
         displayPlayerScore(playerScore);
+        displayComputerScore(computerScore);
     }
 }
 
@@ -117,11 +113,9 @@ function checkSciccor() {
         let computerSelection = getComputerChoice();
         displayPlayerSelect(playerSelection);
         displayComputerSelect(computerSelection);
-        console.log(playerSelection, computerSelection);
-        console.log(playRound(playerSelection, computerSelection));
         displayRoundResult(playerSelection,computerSelection);
-        console.log(playerScore, computerScore);
         displayPlayerScore(playerScore);
+        displayComputerScore(computerScore);
     }
 }
  function displayPlayerSelect(playerSelection) {
@@ -148,11 +142,16 @@ function checkSciccor() {
  function displayPlayerScore(playerScore) {
     const playerScoreContainer = document.querySelector('.display-playerScore');
     const playerScoreText = document.querySelector('.playerScore-text');
-    playerScoreText.textContent = `player score : ${playerScore}`;
+    playerScoreText.textContent = `Player score : ${playerScore}`;
     playerScoreContainer.appendChild(playerScoreText);
  }
 
-
+ function displayComputerScore(computerScore) {
+    const computerScoreContainer = document.querySelector('.display-computerScore');
+    const computerScoreText = document.querySelector('.computerScore-text');
+    computerScoreText.textContent = `Computer score : ${computerScore}`;
+    computerScoreContainer.appendChild(computerScoreText);
+ }
 
 let playerScore = 0;
 let computerScore = 0;
