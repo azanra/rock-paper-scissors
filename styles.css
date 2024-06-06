@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+    font-size: 20px;
+}
+
+.playBtn {
+    display: flex;
+    gap: 50px;
+    border-radius: 10px;
+}
+
+#rock, #paper,
+#sciccor {
+    padding: 15px 75px 15px 75px;
+}
+
+.playerSelect {
+    display: flex;
+    gap: 200px;
+}
+
+.display-playerSelect,
+.display-computerSelect {
+    padding: 10px;
+}
+
+.playerSelect-text,
+.playerScore-text {
+    color: red;
+}
+
+.computerSelect-text,
+.computerScore-text {
+    color: blue;
+}
+
+
+
