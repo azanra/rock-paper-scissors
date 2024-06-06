@@ -56,23 +56,14 @@ function playRound(playerSelection, computerSelection){
 }
 
 function checkWinner(){
-    if(playerScore > computerScore){
-        console.log(`you win with a score of ${playerScore} against ${computerScore}`);
+    console.log(playerScore, computerScore);
+    if(playerScore === 5){
+        console.log('player is the winner');
     }
-    else if(playerScore === computerScore){
-        console.log(`it's a tie with both score of ${playerScore}`);
-    }
-    else{
-        console.log(`you lose with score of ${playerScore} against ${computerScore}`);
+    else if(computerScore === 5){
+        console.log('computer is the winner');
     }
 }   
-
-function playGame(){
-    checkRock();
-    checkPaper();
-    checkSciccor();
-    checkWinner();
-}
 
 function checkRock() {
     let rockBtn = document.querySelector('#rock');
@@ -86,6 +77,7 @@ function checkRock() {
         displayRoundResult(playerSelection, computerSelection);
         displayPlayerScore(playerScore);
         displayComputerScore(computerScore);
+        checkWinner();
     }
 }
 
@@ -101,6 +93,7 @@ function checkPaper() {
         displayRoundResult(playerSelection, computerSelection);
         displayPlayerScore(playerScore);
         displayComputerScore(computerScore);
+        checkWinner();
     }
 }
 
@@ -116,6 +109,7 @@ function checkSciccor() {
         displayRoundResult(playerSelection,computerSelection);
         displayPlayerScore(playerScore);
         displayComputerScore(computerScore);
+        checkWinner();
     }
 }
  function displayPlayerSelect(playerSelection) {
@@ -152,6 +146,13 @@ function checkSciccor() {
     computerScoreText.textContent = `Computer score : ${computerScore}`;
     computerScoreContainer.appendChild(computerScoreText);
  }
+
+
+function playGame(){
+    checkRock();
+    checkPaper();
+    checkSciccor();
+}
 
 let playerScore = 0;
 let computerScore = 0;
