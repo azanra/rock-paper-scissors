@@ -1,7 +1,7 @@
 # rock-paper-sciccors
 
 ## Links
-- [Live preview](https://azanra.github.io/rock-paper-sciccors/)
+- [Live preview](https://azanra.github.io/rock-paper-scissors/)
 - [Assignment page](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors)
 
 ## About
